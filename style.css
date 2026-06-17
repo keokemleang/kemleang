@@ -1,0 +1,208 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1a1a1a; /* Dark sleek theme suited for a bar/brewery */
+    color: #f5f5f5;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #111111;
+    border-bottom: 2px solid #ffb703;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffb703; /* Beer gold color */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Hover/Touch state for the menu bar links */
+.nav-links a:hover {
+    color: #ffb703;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ffb703;
+}
+
+.cart-icon a {
+    text-decoration: none;
+    color: white;
+    background: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ffb703;
+    transition: background 0.3s;
+}
+
+.cart-icon a:hover {
+    background: #ffb703;
+    color: #000;
+}
+
+.cart-count {
+    background-color: #fb8500;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1532634922-8fe0b757fb13?q=80&w=1472') center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: #ffb703;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffb703;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #fb8500;
+    transform: translateY(-2px);
+}
+
+/* Menu Layout for 20 Items */
+.menu-container {
+    padding: 60px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ffb703;
+}
+
+/* Grid automatically handles sizing on mobile and desktop */
+.beer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* Beer Item Cards */
+.beer-card {
+    background-color: #222222;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Touch/Hover effect to highlight specific card */
+.beer-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffb703;
+}
+
+.beer-image {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.beer-card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #fff;
+}
+
+.description {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 15px;
+    height: 40px; /* Keeps your text aligned uniformly */
+    overflow: hidden;
+}
+
+.price {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffb703;
+    margin-bottom: 20px;
+}
+
+/* Add to Cart Button Styling */
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    border: 2px solid #ffb703;
+    color: #ffb703;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ffb703;
+    color: #000;
+}
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #111111;
+    border-top: 1px solid #333;
+    color: #777;
+    margin-top: 60px;
+    font-size: 14px;
+}
